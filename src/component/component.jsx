@@ -11,11 +11,13 @@ const MyComponent = () => {
       try {
         const response = await fetch('https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json');
         if (!response.ok) {
+            window.alert('failed to fetch data');
          console.log('fetchDataFailed');
         }
         const result = await response.json();
         setData(result);
       } catch (error) {
+        window.alert('failed to fetch data');
         console.log('fetchDataFailed')
       }
     };
