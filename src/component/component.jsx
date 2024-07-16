@@ -16,7 +16,7 @@ const MyComponent = () => {
         const result = await response.json();
         setData(result);
       } catch (error) {
-        console.log(error)
+        console.log('failed to fetch data')
       }
     };
 
