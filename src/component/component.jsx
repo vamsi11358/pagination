@@ -16,7 +16,7 @@ const MyComponent = () => {
         const result = await response.json();
         setData(result);
       } catch (error) {
-        setError(error);
+        console.log(error)
       }
     };
 
